@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
+  <link rel="stylesheet" href="https://www.bisk.com/css/main.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
@@ -242,14 +242,14 @@
                   <div class="form-group">
                     <input type="email" class="form-control" id="exampleInputEmail1" name="email_val"
                       aria-describedby="emailHelp" placeholder="EMAIL"
-                       required>
+                      onfocusout="ValidateEmail(document.myform.email_val)" required>
                   </div>
                   <div class="form-group">
                     <input type="number" class="form-control" id="exampleInputNumber1" name="phone_val"
-                      placeholder="NUMBER" required>
+                      placeholder="NUMBER" onfocusout="ValidatePhone(document.myform.phone_val);" required>
                   </div>
 
-                  <button type="submit" class="btn btn-primary" onclick="event.preventDefault(); ValidateEmail(document.myform.email_val) &&  ValidatePhone(document.myform.phone_val)" >Submit</button>
+                  <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
                 <!-- <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
